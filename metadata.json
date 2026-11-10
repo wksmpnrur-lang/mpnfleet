@@ -1,0 +1,6 @@
+{
+  "name": "MPNFLEETWEB",
+  "description": "Sistem WebFleet inovatif manajemen armada dan alat berbasis data Apps Script dan AppSheet dengan dasbor modern, pemantauan dokumen kadaluarsa, inspeksi, servis, kerusakan, operator, dan driver.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

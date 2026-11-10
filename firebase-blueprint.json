@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MPNFLEETWEB Firestore Schema",
+  "description": "Blueprint schema for MPNFLEETWEB fleet management database",
+  "entities": {
+    "VehicleLight": {
+      "path": "users/{userId}/vehicles_light/{id}",
+      "properties": {
+        "userId": { "type": "string" },
+        "id": { "type": "string" },
+        "plateNumber": { "type": "string" },
+        "model": { "type": "string" },
+        "color": { "type": "string" },
+        "year": { "type": "number" },
+        "brand": { "type": "string" },
+        "engineCapacity": { "type": "string" },
+        "vehicleType": { "type": "string" },
+        "chassisNumber": { "type": "string" },
+        "workArea": { "type": "string" },
+        "badgeNumber": { "type": "string" },
+        "driverName": { "type": "string" },
+        "taxExpiry": { "type": "string" },
+        "stnkExpiry": { "type": "string" },
+        "kirExpiry": { "type": "string" },
+        "tpeExpiry": { "type": "string" },
+        "redPassExpiry": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["userId", "id", "plateNumber", "model", "brand"]
+    },
+    "VehicleHeavy": {
+      "path": "users/{userId}/vehicles_heavy/{id}",
+      "properties": {
+        "userId": { "type": "string" },
+        "id": { "type": "string" },
+        "plateNumber": { "type": "string" },
+        "model": { "type": "string" },
+        "color": { "type": "string" },
+        "year": { "type": "number" },
+        "brand": { "type": "string" },
+        "engineCapacity": { "type": "string" },
+        "vehicleType": { "type": "string" },
+        "chassisNumber": { "type": "string" },
+        "workArea": { "type": "string" },
+        "badgeNumber": { "type": "string" },
+        "operatorName": { "type": "string" },
+        "taxExpiry": { "type": "string" },
+        "stnkExpiry": { "type": "string" },
+        "kirExpiry": { "type": "string" },
+        "tpeExpiry": { "type": "string" },
+        "redPassExpiry": { "type": "string" },
+        "greenPassExpiry": { "type": "string" },
+        "siloExpiry": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["userId", "id", "plateNumber", "model", "brand"]
+    },
+    "Inspection": {
+      "path": "users/{userId}/inspections/{id}",
+      "properties": {
+        "userId": { "type": "string" },
+        "inspectorName": { "type": "string" },
+        "toolId": { "type": "string" },
+        "inspectionDate": { "type": "string" },
+        "inspectionLocation": { "type": "string" },
+        "findingsNotes": { "type": "string" },
+        "findingsPhotoUrl": { "type": "string" },
+        "inspectionResult": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["userId", "inspectorName", "toolId", "inspectionDate"]
+    },
+    "DamageReport": {
+      "path": "users/{userId}/damage_reports/{id}",
+      "properties": {
+        "userId": { "type": "string" },
+        "toolNumber": { "type": "string" },
+        "damageFindings": { "type": "string" },
+        "reportedBy": { "type": "string" },
+        "damageLocation": { "type": "string" },
+        "reportDate": { "type": "string" },
+        "status": { "type": "string" },
+        "createdAt": { "type": "timestamp" },
+        "updatedAt": { "type": "timestamp" }
+      },
+      "required": ["userId", "toolNumber", "damageFindings", "reportedBy"]
+    }
+  }
+}

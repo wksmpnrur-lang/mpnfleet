@@ -1,0 +1,61 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    match /users/{userId} {
+      allow read, write: if isOwner(userId);
+
+      match /vehicles_light/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /vehicles_heavy/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /welding_machines/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /other_equipment/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /drivers/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /operators/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /inspections/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /services/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /damage_reports/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /vendors/{id} {
+        allow read, write: if isOwner(userId);
+      }
+
+      match /sync_logs/{id} {
+        allow read, write: if isOwner(userId);
+      }
+    }
+  }
+}

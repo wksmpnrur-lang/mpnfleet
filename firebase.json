@@ -1,0 +1,8 @@
+{
+  "firestore": [
+    {
+      "database": "ai-studio-android-mpnfleet-74aba585-ae60-482d-8493-e8cd8411f34e",
+      "rules": "firestore.rules"
+    }
+  ]
+}
